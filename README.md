@@ -19,3 +19,12 @@ $ rails db:migrate
 
 Save specific spec file or press [enter] to run all specs.
 Saving a controller will run corresponding features.
+
+## Deploy
+
+```
+heroku login
+git remote -v
+heroku git:remote -a shopify-admin-test
+git push heroku
+```
