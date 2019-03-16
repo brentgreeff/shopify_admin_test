@@ -5,16 +5,17 @@ ruby '2.6.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0.beta3'
-# Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
-# Use Puma as the app server
 gem 'puma', '~> 3.11'
-# Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
+gem "slim-rails"
+
+# https://github.com/rails/webpacker
 gem 'webpacker', '>= 4.0.0.rc.3'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+
+# https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -27,8 +28,13 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.4.1', require: false
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  gem "rspec-rails"
+  gem "guard-rspec"
+
+  gem "capybara"
+  gem "poltergeist"
 end
 
 group :development do
@@ -39,7 +45,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

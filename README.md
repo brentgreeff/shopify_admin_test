@@ -13,3 +13,9 @@ $ brew install postgresql
 $ rails db:create
 $ rails db:migrate
 ```
+
+* Run specs
+`guard`
+
+Save specific spec file or press [enter] to run all specs.
+Saving a controller will run corresponding features.
