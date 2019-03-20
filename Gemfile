@@ -3,12 +3,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.2'
 
+gem "dotenv-rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0.beta3'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem "slim-rails"
+gem 'shopify_api'
 
 # https://github.com/rails/webpacker
 gem 'webpacker', '>= 4.0.0.rc.3'
@@ -35,6 +37,8 @@ group :development, :test do
 
   gem "capybara"
   gem "poltergeist"
+  gem 'awesome_print'
+  gem 'pry-rails'
 end
 
 group :development do
